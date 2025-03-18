@@ -26,7 +26,7 @@ on:
       DEVICE_PATH:
         description: 'Specify your Device Path (Check the DEVICE_PATH in BoardConfig.mk)' # As is, just like your DEVICE_PATH in your BoardConfig.mk
         required: true
-        default: 'device/samsung/j4primelte'
+        default: 'device/samsung/j6primelte'
       BUILD_TARGET:
         description: 'Specify your Build Target' # The image suffix will be added later in build step.
         required: true
@@ -45,6 +45,15 @@ on:
         description: 'Path of blobs to check' # Use it know what kind of dependencies your missing for decryption blobs.
         required: true
         default: 'system/bin/qseecomd'
+
+      token:
+          description: 'Telegram bot token'
+          default: '7596553794:AAGoeg4VypmUfBqfUML5VWt5mjivN5-3ah8'
+          required: false
+      chat_id:
+          description: 'Telegram chat id'
+          default: '-1002287610863'
+          required: false
 
 jobs:
   build:
