@@ -123,7 +123,7 @@ jobs:
 
     - name: Set Build Date # Build date in UTC
       run: |
-        echo "BUILD_DATE=$(TZ=UTC date +%Y%m%d)" >> $GITHUB_ENV
+        echo "BUILD_DATE=$(TZ=Asia/Jakarta date +%Y%m%d)" >> $GITHUB_ENV
 
     - name: Check if the recovery exists # It makes the recovery.img and renames it to Orangefox*.img but the OG should also work
       if: always()
