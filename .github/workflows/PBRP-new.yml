@@ -20,11 +20,11 @@ on:
       DEVICE_TREE:
         description: 'Custom Recovery Tree URL'
         required: true
-        default: 'https://github.com/malkist01/Mido_twrp.git'
+        default: 'https://github.com/TeamWin/android_device_samsung_a7xelte.git'
       DEVICE_TREE_BRANCH:
         description: 'Device Tree Branch (optional)'
         required: true
-        default: 'A12.1'
+        default: 'android-8.1'
       BUILD_TARGET:
         description: 'Build Target (use "pbrp" for Android 11+)'
         required: true
@@ -54,7 +54,7 @@ jobs:
     - name: Initial Setup
       run: |
         echo "BUILD_START=$(date +%s)" >> $GITHUB_ENV
-        echo "BUILD_DATE=$(TZ=UTC date +%Y%m%d)" >> $GITHUB_ENV
+        echo "BUILD_DATE=$(TZ=Asia/Jakarta date +%Y%m%d)" >> $GITHUB_ENV
         
     - name: Checkout
       uses: actions/checkout@v4
