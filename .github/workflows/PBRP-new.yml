@@ -1,4 +1,4 @@
-name: PitchBlack Recovery Project Builder
+name: PBRP
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
       MANIFEST_BRANCH:
         description: 'PBRP Manifest Branch'
         required: true
-        default: 'android-12.1'
+        default: 'android-8.1'
         type: choice
         options:
         - android-14.0
@@ -20,11 +20,11 @@ on:
       DEVICE_TREE:
         description: 'Custom Recovery Tree URL'
         required: true
-        default: 'https://github.com/enter_username/repo_name'
+        default: 'https://github.com/malkist01/twrp_device_samsung_a7xelte.git'
       DEVICE_TREE_BRANCH:
-        description: 'Device Tree Branch (optional)'
-        required: false
-        default: ''
+        description: 'android-7.1'
+        required: true
+        default: 'android-7.1'
       BUILD_TARGET:
         description: 'Build Target (use "pbrp" for Android 11+)'
         required: true
